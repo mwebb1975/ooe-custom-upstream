@@ -1,0 +1,243 @@
+/*
+Theme Name: PSUOutreachMarketing
+Theme URI: http://outreach.psu.edu/
+Author: Penn State Outreach Marketing
+Author URI: http://outreach.psu.edu
+Description: New WP theme for Outreach PSU sites
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: outreach-psu
+Tags:
+
+Styles for the homepage slider, template-parts/content-slider.php
+*/
+
+/*--------------------------------------------------------------
+## #SLIDER AREA
+--------------------------------------------------------------*/
+#hero-container {
+  background-color: #f4f4f9;
+  height: auto;
+  margin: 0 auto;
+  max-height: 455px;
+  position: relative;
+  width: 100%;
+}
+#hero-container .content-area {
+  margin: 0;
+  max-width: 100%;
+}
+#hero-list {
+  padding: 0;
+  margin: 0;
+  position: static;
+}
+#hero-list li {
+  background-color: #f4f4f9;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility ease 2.5s, opacity ease 2.5s;
+  -moz-transition: visibility ease 2.5s, opacity ease 2.5s;
+  -o-transition: visibility ease 2.5s, opacity ease 2.5s;
+  transition: visibility ease 2.5s, opacity ease 2.5s;
+}
+
+#hero-list li.current-hero {
+  position:relative;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: visibility ease 2.5s, opacity ease 2.5s;
+  -moz-transition: visibility ease 2.5s, opacity ease 2.5s;
+  -o-transition: visibility ease 2.5s, opacity ease 2.5s;
+  transition: visibility ease 2.5s, opacity ease 2.5s;
+}
+
+#hero-pager a {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  font-size: .1em;
+  text-indent: -9999px;
+  background: transparent url("../images/slider-nav-dots.png") no-repeat 0 -17px;
+  margin: 0 5px;
+  outline: 0;
+  background-size: 16px 33px;
+}
+#hero-pager a.current-pager {
+  background-position: 0 0px;
+}
+.hero-content-container {
+  display: block;
+  margin: 0px auto;
+  max-height: 455px;
+  max-width: 1200px;
+  position: relative;
+  width: 100%;
+}
+.slider-nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.slider-nav {
+  display: table;
+  padding-left: 1.4rem;
+  position: absolute;
+  top: -45px;
+}
+.slider-nav #hero-pager {
+  float: left;
+}
+.slider-nav .hero-activator {
+  display: block;
+  float: left;
+  margin: 0 0.75em;
+}
+.slider-nav .hero-activator img {
+  margin-top: 2px;
+  max-width: 16px;
+}
+.slider-nav #hero-left {
+  margin-left: 0;
+}
+.slider-title {
+  margin-top: 0;
+}
+
+h3.slider-title {
+  color: #ffffff;
+  font-family: "Open Sans";
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: -1px;
+  line-height: normal;
+  position:relative;
+}
+
+.slider-title a {
+    text-decoration:none;
+}
+
+.slider-content {
+  background-color: #414a5b;
+  padding: 1.4rem 6% 2rem 1.4rem;
+  z-index: 1;
+  width: 100%;
+}
+a.slider-sliderbutton:visited {
+  color: #fff;
+}
+.slider-description {
+  color: #fff;
+  font-size: 1rem;
+  line-height: normal;
+}
+.slider-description p {
+  color: #fff;
+  font-size: 1rem;
+  line-height: normal;
+}
+.slider-readmore a.slider-sliderbutton {
+  background-color: #bf2e43;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0.65em 3em;
+  text-decoration: none;
+  text-align: center;
+  -webkit-transition: background-color .25s ease-out;
+  -moz-transition: background-color .25s ease-out;
+  -o-transition: background-color .25s ease-out;
+  transition: background-color .25s ease-out;
+}
+.slider-readmore a.slider-sliderbutton:hover {
+  background-color: #a51631;
+}
+.slider-image {
+  background-color: #414a5b;
+  overflow: hidden;
+  position: relative;
+}
+.slider-image img {
+  margin: auto;
+}
+.slider-title a, .slider-title a:visited {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 810px) {
+  .hero-content-container {
+    height: 455px;
+  }
+  .hero-content-container .content-area
+  ,.hero-content-container .slider-image {
+    display: block;
+    position: relative;
+  }
+  .slider-title {
+    margin-top: 6rem;
+    padding: 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  }
+  .slider-image {
+    vertical-align: middle;
+  }
+  .slider-readmore {
+    float: none;
+  }
+   .slider-nav {
+    float: none;
+    bottom: 30px;
+    top: inherit;
+  }
+  .slider-readmore {
+    display: block;
+    padding-bottom: 0.75em;
+  }
+  #hero-list li {
+    background-size: cover;
+    height: 455px;
+  }
+  .slider-content {
+    background-color: transparent;
+    padding-right: 0;
+    max-width: 520px;
+  }
+  .slider-image img {
+    display: none;
+  }
+  .slider-description {
+    display: block;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #hero-container {
+    height: auto;
+  }
+}
+
+
+@media screen and (min-width: 1232px) {
+  .slider-content {
+    padding: 1.4em 0;
+  }
+  .slider-nav {
+    padding-left: 0;
+  }
+  .hero-content-container .content-area {
+    z-index: 1;
+  }
+}
